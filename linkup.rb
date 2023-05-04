@@ -11,7 +11,7 @@ class Linkup < Formula
     sha256 "2afbeaaa0e080d8e7ef7854780729ca0f61833c27e7921288f8bdca92279d371"
   end
 
-  depends_on "cloudflare/cloudflare/cloudflared"
+  depends_on "cloudflared"
 
   def install
     bin.install 'linkup'
