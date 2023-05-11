@@ -4,11 +4,11 @@ class Linkup < Formula
   license "Apache-2.0"
 
   if Hardware::CPU.arm?
-    url "https://github.com/mentimeter/linkup/releases/download/0.0.2/linkup-0.0.2-aarch64-apple-darwin.tar.gz"
-    sha256 "ac5100e66b270ab0291211d8be33ccb6886a3ee5344608439a3e736a1d3d31cd"
+    url "https://github.com/mentimeter/linkup/releases/download/0.0.4/linkup-0.0.4-aarch64-apple-darwin.tar.gz"
+    sha256 "b4b669c18a1932ff3c24fe6c00fed1dc1d8e60ca0908dca3c2cadaff0e869959"
   elsif Hardware::CPU.intel?
-    url "https://github.com/mentimeter/linkup/releases/download/0.0.2/linkup-0.0.2-x86_64-apple-darwin.tar.gz"
-    sha256 "39425d6f9386774bcab564ad30d9c4635e46e151d9ef72ebd88a3393967f36be"
+    url "https://github.com/mentimeter/linkup/releases/download/0.0.4/linkup-0.0.4-x86_64-apple-darwin.tar.gz"
+    sha256 "3d3471c5af24e4c244cce2c6edce4b0f3c9281addcf0a95970ef7f5ab60b2f8b"
   end
 
   depends_on "cloudflared"
