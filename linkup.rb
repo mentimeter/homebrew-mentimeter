@@ -1,7 +1,7 @@
-ARM_URL = "https://github.com/mentimeter/linkup/releases/download/1.0.4/linkup-1.0.4-aarch64-apple-darwin.tar.gz"
-ARM_SHA = "148fa7ebf9a99acb06e2ebcc37893e546ef9f8fe173c214d0bc581eb43fda46b"
-X86_URL = "https://github.com/mentimeter/linkup/releases/download/1.0.4/linkup-1.0.4-x86_64-apple-darwin.tar.gz"
-X86_SHA = "28306f32bdc5877624de2e61b609f9f01f923224a45c2831cf150f3f64081434"
+ARM_URL = "https://github.com/mentimeter/linkup/releases/download/1.1.0/linkup-1.1.0-aarch64-apple-darwin.tar.gz"
+ARM_SHA = "8eab874406cd9be4ee5d72acb5159dc213bf4c106b8a14759e1e0689e9fbf49a"
+X86_URL = "https://github.com/mentimeter/linkup/releases/download/1.1.0/linkup-1.1.0-x86_64-apple-darwin.tar.gz"
+X86_SHA = "552f0891fcc5a381ce8278ba09e3d69f43f26c3c73d91ee80b28987f190e35f9"
 
 class Linkup < Formula
   desc "Link up preview environments"
