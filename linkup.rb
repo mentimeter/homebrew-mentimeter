@@ -37,6 +37,9 @@ class Linkup < Formula
 
   def install
     bin.install 'linkup'
-    generate_completions_from_executable(bin/"linkup", "completion", shell_parameter_format: "--shell=", shells: [:bash, :zsh])
+
+    if OS.mac?
+      generate_completions_from_executable(bin/"linkup", "completion", shell_parameter_format: "--shell=", shells: [:bash, :zsh])
+    end
   end
 end
