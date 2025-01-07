@@ -2,16 +2,20 @@
 
 set -e
 
-ARM_SHA_LINK=$(curl -s https://api.github.com/repos/mentimeter/linkup/releases/latest | jq -r '.assets[] | select(.name | test("aarch64-apple-darwin.tar.gz.sha256$")) | .browser_download_url')
-ARM_LINK=$(curl -s https://api.github.com/repos/mentimeter/linkup/releases/latest | jq -r '.assets[] | select(.name | test("aarch64-apple-darwin.tar.gz$")) | .browser_download_url')
-ARM_SHA=$(curl -L -s $ARM_SHA_LINK)
-echo "Latest ARM Linkup:"
-echo $ARM_LINK
-echo $ARM_SHA
+ASSETS=$(curl -s https://api.github.com/repos/mentimeter/linkup/releases/latest | jq -r '.assets[]')
 
-X_SHA_LINK=$(curl -s https://api.github.com/repos/mentimeter/linkup/releases/latest | jq -r '.assets[] | select(.name | test("x86_64-apple-darwin.tar.gz.sha256$")) | .browser_download_url')
-X_LINK=$(curl -s https://api.github.com/repos/mentimeter/linkup/releases/latest | jq -r '.assets[] | select(.name | test("x86_64-apple-darwin.tar.gz$")) | .browser_download_url')
-X_SHA=$(curl -L -s $X_SHA_LINK)
-echo "Latest x86 Linkup:"
-echo $X_LINK
-echo $X_SHA
+MAC_ARM_SHA_LINK=$(echo $ASSETS | jq -r 'select(.name | test("aarch64-apple-darwin.tar.gz.sha256$")) | .browser_download_url')
+MAC_ARM_LINK=$(echo $ASSETS | jq -r 'select(.name | test("aarch64-apple-darwin.tar.gz$")) | .browser_download_url')
+MAC_ARM_SHA=$(curl -L -s $MAC_ARM_SHA_LINK)
+printf "Latest Mac ARM Linkup:\n"
+printf "%s\n" $MAC_ARM_LINK
+printf "%s\n" $MAC_ARM_SHA
+
+printf "\n"
+
+MAC_X86_SHA_LINK=$(echo $ASSETS | jq -r 'select(.name | test("x86_64-apple-darwin.tar.gz.sha256$")) | .browser_download_url')
+MAC_X86_LINK=$(echo $ASSETS | jq -r 'select(.name | test("x86_64-apple-darwin.tar.gz$")) | .browser_download_url')
+MAC_X86_SHA=$(curl -L -s $MAC_X86_SHA_LINK)
+printf "Latest Mac x86 Linkup:\n"
+printf "%s\n" $MAC_X86_LINK
+printf "%s\n" $MAC_X86_SHA
