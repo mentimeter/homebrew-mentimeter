@@ -8,6 +8,7 @@ class Linkup < Formula
   desc 'Link up preview environments'
   homepage 'https://github.com/mentimeter/linkup'
   license 'Apache-2.0'
+  version LATEST_RELEASE['tag_name']
 
   depends_on 'cloudflared'
   depends_on 'dnsmasq'
