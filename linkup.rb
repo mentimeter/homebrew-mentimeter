@@ -14,28 +14,28 @@ class Linkup < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      mac_arm_asset = ASSETS.find { |asset| asset['name'].match(/darwin-aarch64\.zip$/) }
-      sha_asset = ASSETS.find { |asset| asset['name'].match(/darwin-aarch64\.zip\.sha256$/) }
+      mac_arm_asset = ASSETS.find { |asset| asset['name'].match(/darwin-aarch64\.tar\.gz$/) }
+      sha_asset = ASSETS.find { |asset| asset['name'].match(/darwin-aarch64\.tar\.gz\.sha256$/) }
 
       url mac_arm_asset['browser_download_url']
       sha256 URI.open(sha_asset['browser_download_url']).read.split.first
     elsif Hardware::CPU.intel?
-      mac_x86_asset = ASSETS.find { |asset| asset['name'].match(/darwin-x86\.zip$/) }
-      sha_asset = ASSETS.find { |asset| asset['name'].match(/darwin-x86\.zip\.sha256$/) }
+      mac_x86_asset = ASSETS.find { |asset| asset['name'].match(/darwin-x86\.tar\.gz$/) }
+      sha_asset = ASSETS.find { |asset| asset['name'].match(/darwin-x86\.tar\.gz\.sha256$/) }
 
       url mac_x86_asset['browser_download_url']
       sha256 URI.open(sha_asset['browser_download_url']).read.split.first
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      linux_arm_asset = ASSETS.find { |asset| asset['name'].match(/linux-aarch64\.zip$/) }
-      sha_asset = ASSETS.find { |asset| asset['name'].match(/linux-aarch64\.zip\.sha256$/) }
+      linux_arm_asset = ASSETS.find { |asset| asset['name'].match(/linux-aarch64\.tar\.gz$/) }
+      sha_asset = ASSETS.find { |asset| asset['name'].match(/linux-aarch64\.tar\.gz\.sha256$/) }
 
       url linux_arm_asset['browser_download_url']
       sha256 URI.open(sha_asset['browser_download_url']).read.split.first
     elsif Hardware::CPU.intel?
-      linux_x86_asset = ASSETS.find { |asset| asset['name'].match(/linux-x86\.zip$/) }
-      sha_asset = ASSETS.find { |asset| asset['name'].match(/linux-x86\.zip\.sha256$/) }
+      linux_x86_asset = ASSETS.find { |asset| asset['name'].match(/linux-x86\.tar\.gz$/) }
+      sha_asset = ASSETS.find { |asset| asset['name'].match(/linux-x86\.tar\.gz\.sha256$/) }
 
       url linux_x86_asset['browser_download_url']
       sha256 URI.open(sha_asset['browser_download_url']).read.split.first
