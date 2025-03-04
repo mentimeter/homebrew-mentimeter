@@ -56,9 +56,7 @@ class Linkup < Formula
 
   def install
     bin.install 'linkup'
-    # To avoid clashing with another Caddy installation, we rename the binary to linkup-caddy.
-    # The CLI needs to be aware of this when checking the installation method.
-    bin.install 'caddy' => 'linkup-caddy'
+    bin.install 'linkup-caddy'
 
     return unless OS.mac?
 
