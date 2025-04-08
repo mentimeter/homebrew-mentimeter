@@ -32,7 +32,6 @@ class Linkup < Formula
   end
 
   depends_on "cloudflared"
-  depends_on "dnsmasq"
 
   def install
     bin.install 'linkup'
