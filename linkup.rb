@@ -1,12 +1,12 @@
-MAC_ARM_URL = "https://github.com/mentimeter/linkup/releases/download/2.2.0/linkup-2.2.0-aarch64-apple-darwin.tar.gz"
-MAC_ARM_SHA = "32f70f4884ec337109446701632ffef859f77d53cb794671b5784dd7f5cfa0b1"
-MAC_X86_URL = "https://github.com/mentimeter/linkup/releases/download/2.2.0/linkup-2.2.0-x86_64-apple-darwin.tar.gz"
-MAC_X86_SHA = "12594be9a7019602916c2df0e271824c2dae9aac2d4fb7abcd3f9b09b26ebf6a"
+MAC_ARM_URL = "https://github.com/mentimeter/linkup/releases/download/3.0.0/linkup-3.0.0-aarch64-apple-darwin.tar.gz"
+MAC_ARM_SHA = "085f41eb6c5986233f66f1ccde7b1d4f42047a31f9b39bddb5a459ca3f6f1943"
+MAC_X86_URL = "https://github.com/mentimeter/linkup/releases/download/3.0.0/linkup-3.0.0-x86_64-apple-darwin.tar.gz"
+MAC_X86_SHA = "b51dd50e2187ee80a164cb6d7145252ca6e483780434c723a68c1f1ff228a67e"
 
-LINUX_ARM_URL = "https://github.com/mentimeter/linkup/releases/download/2.2.0/linkup-2.2.0-aarch64-unknown-linux-gnu.tar.gz"
-LINUX_ARM_SHA = "f53b2a4b1ec44b0540a8ad626cf41f1ea69da3aa2e67a5886852ee9f3e01afe6"
-LINUX_X86_URL = "https://github.com/mentimeter/linkup/releases/download/2.2.0/linkup-2.2.0-x86_64-unknown-linux-gnu.tar.gz"
-LINUX_X86_SHA = "323a0acb5f97174c5d36f9e19a8edc76a3f4a658d2ed44ae546f90e130cb9a11"
+LINUX_ARM_URL = "https://github.com/mentimeter/linkup/releases/download/3.0.0/linkup-3.0.0-aarch64-unknown-linux-gnu.tar.gz"
+LINUX_ARM_SHA = "070593d423245fda35830795110fd81cb5c5c9b98da9eba802c5932185e788bc"
+LINUX_X86_URL = "https://github.com/mentimeter/linkup/releases/download/3.0.0/linkup-3.0.0-x86_64-unknown-linux-gnu.tar.gz"
+LINUX_X86_SHA = "c990580329e0e1d0bc984aa561fc617174583070414fa4ea4a1c858b6c1758fb"
 
 class Linkup < Formula
   desc "Link up preview environments"
